@@ -1,3 +1,7 @@
 {
-    "extends": "eslint-config-trybe-backend"
+
+    "extends": [
+        "eslint-config-trybe-backend"
+    ]
+
 }

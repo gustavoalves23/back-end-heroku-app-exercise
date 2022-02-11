@@ -1,0 +1,19 @@
+on: [push, pull_request]
+
+jobs:
+  Testes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifica o repositorio Git
+        uses: actions/checkout@v2
+    
+      - name: Instala o node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: instala as dependencias
+        run: npm install
+
+      - name: Executa o teste
+        run: npm test

@@ -2,8 +2,9 @@ const express = require('express');
 const rescue = require('express-rescue');
 const UserController = require('../controllers/user');
 const errorMiddleware = require('../middlewares/error');
+const cors = require('cors');
 
-const app = express();
+const app = express(cors());
 
 app.get('/ping', (req, res) => res.status(200).send('pong'));
 
